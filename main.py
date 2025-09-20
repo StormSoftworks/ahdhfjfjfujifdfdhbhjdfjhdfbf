@@ -13,7 +13,7 @@ client = commands.Bot(command_prefix='.',
                       intents=discord.Intents.all(),
                       help_command=None)
 
-TOKEN = "MTQxODYyMTc3OTAyMjQ1MDc5MQ.GzXI9N.AIIFIy4U8hraXZ8L9XcD-FKoF_07g4k5us4_aU"
+TOKEN = Token
 ModLogsId = 1418627395635646544
 MODERATOR_ROLE_ID = 1418654116904964149
 DB_WARNINGS = "warnings.db"
