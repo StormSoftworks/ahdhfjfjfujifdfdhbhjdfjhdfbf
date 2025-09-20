@@ -1,0 +1,34 @@
+ Environment updated. Reloading shell...
+2025-05-05 14:29:25 INFO     discord.client logging in using static token
+2025-05-05 14:29:25 INFO     discord.gateway Shard ID None has connected to Gateway (Session ID: 401f1a7cca46e9c035445b19b6678395).
+[✅] Logged in as FC8 Moderation#1065
+[🔧] Registered 4 global slash command(s).
+2025-05-05 14:30:21 ERROR    discord.app_commands.tree Ignoring exception in command 'kick'
+Traceback (most recent call last):
+  File "/home/runner/workspace/main.py", line 72, in kick
+    f"Could not find member {member.name} in the server.",
+                             ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/main.py", line 105, in kick
+    f"Failed to kick {member.name}: {str(e)}", ephemeral=True)
+                      ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'kick' raised an exception: AttributeError: 'NoneType' object has no attribute 'name'
